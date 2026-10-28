@@ -1,0 +1,75 @@
+[
+  {
+    "id": "ssd_nvme4_2280",
+    "name": "ByteDrive Sprint 1 TB",
+    "form_factor": "M2",
+    "key": "M",
+    "size": 2280,
+    "protocol": "NVMe",
+    "pcie_generation": 4,
+    "power_w": 7
+  },
+  {
+    "id": "ssd_nvme3_2280",
+    "name": "ByteDrive Sprint 512 GB",
+    "form_factor": "M2",
+    "key": "M",
+    "size": 2280,
+    "protocol": "NVMe",
+    "pcie_generation": 3,
+    "power_w": 5
+  },
+  {
+    "id": "ssd_nvme5_2280",
+    "name": "ByteDrive Sprint 5 2 TB",
+    "form_factor": "M2",
+    "key": "M",
+    "size": 2280,
+    "protocol": "NVMe",
+    "pcie_generation": 5,
+    "power_w": 11
+  },
+  {
+    "id": "ssd_nvme4_2230",
+    "name": "ByteDrive Mini 2230 1 TB",
+    "form_factor": "M2",
+    "key": "M",
+    "size": 2230,
+    "protocol": "NVMe",
+    "pcie_generation": 4,
+    "power_w": 5
+  },
+  {
+    "id": "ssd_nvme4_22110",
+    "name": "ByteDrive Long 22110 2 TB",
+    "form_factor": "M2",
+    "key": "M",
+    "size": 22110,
+    "protocol": "NVMe",
+    "pcie_generation": 4,
+    "power_w": 10
+  },
+  {
+    "id": "ssd_m2_sata",
+    "name": "ByteDrive M.2 SATA 512 GB",
+    "form_factor": "M2",
+    "key": "B+M",
+    "size": 2280,
+    "protocol": "SATA",
+    "power_w": 4
+  },
+  {
+    "id": "ssd_sata25",
+    "name": "ByteDrive 2.5-inch SSD 1 TB",
+    "form_factor": "SATA_2.5",
+    "protocol": "SATA",
+    "power_w": 4
+  },
+  {
+    "id": "hdd_sata35",
+    "name": "ByteDrive 3.5-inch HDD 4 TB",
+    "form_factor": "SATA_3.5",
+    "protocol": "SATA",
+    "power_w": 9
+  }
+]

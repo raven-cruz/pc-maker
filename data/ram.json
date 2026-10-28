@@ -1,0 +1,74 @@
+[
+  {
+    "id": "ram_d4_8",
+    "name": "PixelRAM DDR4 8 GB",
+    "type": "DDR4",
+    "form_factor": "UDIMM",
+    "pins": 288,
+    "modules": 1,
+    "gb_per_module": 8
+  },
+  {
+    "id": "ram_d4_16",
+    "name": "PixelRAM DDR4 16 GB Kit (2x8)",
+    "type": "DDR4",
+    "form_factor": "UDIMM",
+    "pins": 288,
+    "modules": 2,
+    "gb_per_module": 8
+  },
+  {
+    "id": "ram_d4_32",
+    "name": "PixelRAM DDR4 32 GB Kit (2x16)",
+    "type": "DDR4",
+    "form_factor": "UDIMM",
+    "pins": 288,
+    "modules": 2,
+    "gb_per_module": 16
+  },
+  {
+    "id": "ram_d4_64",
+    "name": "PixelRAM DDR4 64 GB Kit (4x16)",
+    "type": "DDR4",
+    "form_factor": "UDIMM",
+    "pins": 288,
+    "modules": 4,
+    "gb_per_module": 16
+  },
+  {
+    "id": "ram_d5_16",
+    "name": "PixelRAM DDR5 16 GB",
+    "type": "DDR5",
+    "form_factor": "UDIMM",
+    "pins": 288,
+    "modules": 1,
+    "gb_per_module": 16
+  },
+  {
+    "id": "ram_d5_32",
+    "name": "PixelRAM DDR5 32 GB Kit (2x16)",
+    "type": "DDR5",
+    "form_factor": "UDIMM",
+    "pins": 288,
+    "modules": 2,
+    "gb_per_module": 16
+  },
+  {
+    "id": "ram_d5_64",
+    "name": "PixelRAM DDR5 64 GB Kit (2x32)",
+    "type": "DDR5",
+    "form_factor": "UDIMM",
+    "pins": 288,
+    "modules": 2,
+    "gb_per_module": 32
+  },
+  {
+    "id": "ram_d5_128",
+    "name": "PixelRAM DDR5 128 GB Kit (4x32)",
+    "type": "DDR5",
+    "form_factor": "UDIMM",
+    "pins": 288,
+    "modules": 4,
+    "gb_per_module": 32
+  }
+]

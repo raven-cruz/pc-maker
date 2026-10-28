@@ -1,0 +1,18 @@
+{
+  "board_background": "#FFFFFF",
+  "grid_line": "#D1D5DB",
+  "text": "#111827",
+  "connector_colors": {
+    "cpu_socket": "#60A5FA",
+    "memory_slot": "#C4B5FD",
+    "pcie_slot": "#93C5FD",
+    "m2_slot": "#FDBA74",
+    "sata_port": "#FDE68A",
+    "usb_header": "#67E8F9",
+    "rgb_header": "#F9A8D4",
+    "fan_header": "#86EFAC",
+    "power_header": "#FCA5A5",
+    "front_panel_header": "#FCD34D"
+  },
+  "notes": "For prototype visual styling only; not hardware-accurate color coding."
+}

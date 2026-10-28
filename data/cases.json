@@ -1,0 +1,95 @@
+[
+  {
+    "id": "case_pocket",
+    "name": "FrameLab Pocket mATX",
+    "motherboard_form_factors": [
+      "mATX",
+      "ITX"
+    ],
+    "gpu_max_length_mm": 295,
+    "cpu_cooler_max_height_mm": 160,
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "radiator_sizes_mm": [
+      120
+    ],
+    "sata_bays_2_5": 2,
+    "sata_bays_3_5": 1,
+    "front_usb_headers": [
+      "USB3_19PIN",
+      "USB2_9PIN"
+    ]
+  },
+  {
+    "id": "case_airflow",
+    "name": "FrameLab Airflow ATX",
+    "motherboard_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "gpu_max_length_mm": 380,
+    "cpu_cooler_max_height_mm": 180,
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "radiator_sizes_mm": [
+      120,
+      240,
+      280,
+      360
+    ],
+    "sata_bays_2_5": 3,
+    "sata_bays_3_5": 2,
+    "front_usb_headers": [
+      "USB3_19PIN",
+      "USBC_20PIN"
+    ]
+  },
+  {
+    "id": "case_mini",
+    "name": "FrameLab Mini ITX",
+    "motherboard_form_factors": [
+      "ITX"
+    ],
+    "gpu_max_length_mm": 200,
+    "cpu_cooler_max_height_mm": 80,
+    "supported_psu_form_factors": [
+      "SFX"
+    ],
+    "radiator_sizes_mm": [],
+    "sata_bays_2_5": 1,
+    "sata_bays_3_5": 0,
+    "front_usb_headers": [
+      "USB3_19PIN"
+    ]
+  },
+  {
+    "id": "case_showcase",
+    "name": "FrameLab RGB Showcase",
+    "motherboard_form_factors": [
+      "ATX",
+      "mATX",
+      "ITX"
+    ],
+    "gpu_max_length_mm": 410,
+    "cpu_cooler_max_height_mm": 185,
+    "supported_psu_form_factors": [
+      "ATX"
+    ],
+    "radiator_sizes_mm": [
+      120,
+      240,
+      280,
+      360
+    ],
+    "sata_bays_2_5": 4,
+    "sata_bays_3_5": 2,
+    "front_usb_headers": [
+      "USB3_19PIN",
+      "USBC_20PIN",
+      "USB2_9PIN"
+    ]
+  }
+]

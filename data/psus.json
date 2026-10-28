@@ -1,0 +1,54 @@
+[
+  {
+    "id": "psu_atx450",
+    "name": "VoltWorks 450W Basic",
+    "form_factor": "ATX",
+    "watts": 450,
+    "connectors": {
+      "ATX_24PIN": 1,
+      "EPS_8PIN": 1,
+      "PCIE_8PIN": 1,
+      "PCIE_16PIN": 0,
+      "SATA_POWER": 4
+    }
+  },
+  {
+    "id": "psu_atx650",
+    "name": "VoltWorks 650W Bronze",
+    "form_factor": "ATX",
+    "watts": 650,
+    "connectors": {
+      "ATX_24PIN": 1,
+      "EPS_8PIN": 1,
+      "PCIE_8PIN": 2,
+      "PCIE_16PIN": 0,
+      "SATA_POWER": 6
+    }
+  },
+  {
+    "id": "psu_atx850",
+    "name": "VoltWorks 850W Modern",
+    "form_factor": "ATX",
+    "watts": 850,
+    "connectors": {
+      "ATX_24PIN": 1,
+      "EPS_8PIN": 2,
+      "PCIE_8PIN": 3,
+      "PCIE_16PIN": 1,
+      "SATA_POWER": 8
+    }
+  },
+  {
+    "id": "psu_sfx550",
+    "name": "VoltWorks SFX 550W",
+    "form_factor": "SFX",
+    "watts": 550,
+    "connectors": {
+      "ATX_24PIN": 1,
+      "EPS_8PIN": 1,
+      "PCIE_8PIN": 1,
+      "PCIE_16PIN": 0,
+      "SATA_POWER": 3
+    }
+  }
+]

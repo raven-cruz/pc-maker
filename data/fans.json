@@ -1,0 +1,26 @@
+[
+  {
+    "id": "fan_plain120",
+    "name": "Breeze 120 PWM",
+    "diameter_mm": 120,
+    "fan_connector": "PWM_4PIN",
+    "rgb_connector": null,
+    "power_w": 3
+  },
+  {
+    "id": "fan_argb120",
+    "name": "Breeze 120 ARGB",
+    "diameter_mm": 120,
+    "fan_connector": "PWM_4PIN",
+    "rgb_connector": "ARGB_5V_3PIN",
+    "power_w": 5
+  },
+  {
+    "id": "fan_rgb120",
+    "name": "Breeze 120 12V RGB",
+    "diameter_mm": 120,
+    "fan_connector": "PWM_4PIN",
+    "rgb_connector": "RGB_12V_4PIN",
+    "power_w": 5
+  }
+]

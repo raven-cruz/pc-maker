@@ -1,0 +1,81 @@
+[
+  {
+    "id": "cooler_am4_stock",
+    "name": "ChillBits AM4 Stock",
+    "supported_mounts": [
+      "AM4"
+    ],
+    "cooling_capacity_w": 95,
+    "type": "air",
+    "height_mm": 68,
+    "fan_connector": "PWM_4PIN",
+    "rgb_connector": null
+  },
+  {
+    "id": "cooler_lowprofile",
+    "name": "ChillBits LP70",
+    "supported_mounts": [
+      "AM4",
+      "AM5",
+      "LGA1700"
+    ],
+    "cooling_capacity_w": 105,
+    "type": "air",
+    "height_mm": 70,
+    "fan_connector": "PWM_4PIN",
+    "rgb_connector": null
+  },
+  {
+    "id": "cooler_tower155",
+    "name": "ChillBits Tower 155 ARGB",
+    "supported_mounts": [
+      "AM4",
+      "AM5",
+      "LGA1700"
+    ],
+    "cooling_capacity_w": 155,
+    "type": "air",
+    "height_mm": 155,
+    "fan_connector": "PWM_4PIN",
+    "rgb_connector": "ARGB_5V_3PIN"
+  },
+  {
+    "id": "cooler_tower170",
+    "name": "ChillBits Double Tower",
+    "supported_mounts": [
+      "AM5",
+      "LGA1700"
+    ],
+    "cooling_capacity_w": 235,
+    "type": "air",
+    "height_mm": 170,
+    "fan_connector": "PWM_4PIN",
+    "rgb_connector": null
+  },
+  {
+    "id": "cooler_aio240",
+    "name": "ChillBits Liquid 240 RGB",
+    "supported_mounts": [
+      "AM4",
+      "AM5",
+      "LGA1700"
+    ],
+    "cooling_capacity_w": 260,
+    "type": "liquid",
+    "radiator_mm": 240,
+    "fan_connector": "PWM_4PIN",
+    "rgb_connector": "RGB_12V_4PIN"
+  },
+  {
+    "id": "cooler_lga_only",
+    "name": "ChillBits L17 Tower",
+    "supported_mounts": [
+      "LGA1700"
+    ],
+    "cooling_capacity_w": 185,
+    "type": "air",
+    "height_mm": 158,
+    "fan_connector": "PWM_4PIN",
+    "rgb_connector": null
+  }
+]

@@ -1,0 +1,49 @@
+{
+  "dataset_name": "PC Dress-Up Prototype Dataset",
+  "version": "0.1.0",
+  "fictional": true,
+  "disclaimer": "All brands, models, capabilities, numbers, and placements are illustrative, not manufacturer-verified.",
+  "files": {
+    "motherboards": "motherboards.json",
+    "cpus": "cpus.json",
+    "coolers": "coolers.json",
+    "ram": "ram.json",
+    "gpus": "gpus.json",
+    "storage": "storage.json",
+    "cases": "cases.json",
+    "psus": "psus.json",
+    "fans": "fans.json",
+    "lighting": "lighting.json",
+    "build_examples": "example_builds.json"
+  },
+  "layout_coordinate_convention": "Each motherboard connector layout uses x,y,w,h in 0-100 percentages of a top-down board image; approximate and fictional.",
+  "connector_standards": [
+    "AM4",
+    "AM5",
+    "LGA1700",
+    "DDR4_UDIMM_288",
+    "DDR5_UDIMM_288",
+    "PCIE_X1",
+    "PCIE_X16",
+    "M2_M",
+    "SATA_6GBPS",
+    "USB2_9PIN",
+    "USB3_19PIN",
+    "USBC_20PIN",
+    "RGB_12V_4PIN",
+    "ARGB_5V_3PIN",
+    "PWM_4PIN",
+    "ATX_24PIN",
+    "EPS_8PIN",
+    "FRONT_PANEL"
+  ],
+  "notes": [
+    "DDR4 and DDR5 UDIMMs both have 288 pins but are not interchangeable.",
+    "M.2 length 2280 means 22 x 80 mm.",
+    "PCIe slot physical lanes can differ from electrical lanes.",
+    "USB headers are motherboard-side connectors, not external USB ports.",
+    "RGB_12V_4PIN and ARGB_5V_3PIN are intentionally incompatible.",
+    "Power draw is a rough gameplay estimate, not an electrical engineering model.",
+    "Motherboard layout is approximate and not dimensionally accurate."
+  ]
+}

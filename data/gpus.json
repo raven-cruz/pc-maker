@@ -1,0 +1,48 @@
+[
+  {
+    "id": "gpu_tiny75",
+    "name": "RenderFox Nano 75",
+    "pcie_slot": "PCIE_X16",
+    "pcie_generation": 3,
+    "length_mm": 175,
+    "thickness_slots": 2,
+    "tdp_w": 75,
+    "power_connectors": {}
+  },
+  {
+    "id": "gpu_mid170",
+    "name": "RenderFox Play 170",
+    "pcie_slot": "PCIE_X16",
+    "pcie_generation": 4,
+    "length_mm": 245,
+    "thickness_slots": 2,
+    "tdp_w": 170,
+    "power_connectors": {
+      "PCIE_8PIN": 1
+    }
+  },
+  {
+    "id": "gpu_long285",
+    "name": "RenderFox Ultra 285",
+    "pcie_slot": "PCIE_X16",
+    "pcie_generation": 4,
+    "length_mm": 322,
+    "thickness_slots": 3,
+    "tdp_w": 285,
+    "power_connectors": {
+      "PCIE_8PIN": 2
+    }
+  },
+  {
+    "id": "gpu_titan350",
+    "name": "RenderFox Titan 350",
+    "pcie_slot": "PCIE_X16",
+    "pcie_generation": 5,
+    "length_mm": 356,
+    "thickness_slots": 3.5,
+    "tdp_w": 350,
+    "power_connectors": {
+      "PCIE_16PIN": 1
+    }
+  }
+]

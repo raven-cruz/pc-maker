@@ -1,0 +1,51 @@
+[
+  {
+    "id": "cpu_a4_65",
+    "name": "DemoSilicon A4 5600",
+    "socket": "AM4",
+    "tdp_w": 65,
+    "integrated_graphics": false
+  },
+  {
+    "id": "cpu_a4_105",
+    "name": "DemoSilicon A4 5800X",
+    "socket": "AM4",
+    "tdp_w": 105,
+    "integrated_graphics": false
+  },
+  {
+    "id": "cpu_a5_65",
+    "name": "DemoSilicon A5 7600",
+    "socket": "AM5",
+    "tdp_w": 65,
+    "integrated_graphics": true
+  },
+  {
+    "id": "cpu_a5_170",
+    "name": "DemoSilicon A5 7900X",
+    "socket": "AM5",
+    "tdp_w": 170,
+    "integrated_graphics": true
+  },
+  {
+    "id": "cpu_l17_65",
+    "name": "DemoSilicon L17 12400",
+    "socket": "LGA1700",
+    "tdp_w": 65,
+    "integrated_graphics": true
+  },
+  {
+    "id": "cpu_l17_125",
+    "name": "DemoSilicon L17 13600K",
+    "socket": "LGA1700",
+    "tdp_w": 125,
+    "integrated_graphics": true
+  },
+  {
+    "id": "cpu_l17_180",
+    "name": "DemoSilicon L17 14900K",
+    "socket": "LGA1700",
+    "tdp_w": 180,
+    "integrated_graphics": true
+  }
+]

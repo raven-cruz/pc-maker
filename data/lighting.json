@@ -1,0 +1,14 @@
+[
+  {
+    "id": "led_argb_strip",
+    "name": "GlowTape ARGB 5V Strip",
+    "rgb_connector": "ARGB_5V_3PIN",
+    "power_w": 4
+  },
+  {
+    "id": "led_rgb_strip",
+    "name": "GlowTape RGB 12V Strip",
+    "rgb_connector": "RGB_12V_4PIN",
+    "power_w": 5
+  }
+]
