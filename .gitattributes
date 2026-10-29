@@ -1,2 +1,5 @@
-*.ipynb filter=nbstripout
-prototypes/text_adv.ipynb !filter
+# strip outputs from all notebooks
+*.ipynb filter=nbstripout diff=ipynb
+
+# preserve outputs for text adventure
+prototypes/text_adv.ipynb filter= diff=
