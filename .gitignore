@@ -1,1 +1,4 @@
-.ipynb_checkpoints
+keys/
+venv/
+.ipynb_checkpoints/
+.DS_STORE
