@@ -1,0 +1,2 @@
+*.ipynb filter=nbstripout
+prototypes/text_adv.ipynb !filter
