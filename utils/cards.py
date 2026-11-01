@@ -312,6 +312,8 @@ def make_card(type, index):
         ),
     )
 
+    card.price_usd = price
+
     return card
 
 ### randomization
@@ -326,6 +328,8 @@ def deal_hand(hand_size=4):
 
 def hand_to_widget(hand):
     original_hand_size = len(hand)
+    bank_balance = 0
+    bank_label = widgets.Label(f'Bank: ${bank_balance:,}')
     hand_widget = widgets.Box(
         hand,
         layout=widgets.Layout(
@@ -341,7 +345,11 @@ def hand_to_widget(hand):
 
         # removes card from hand AND widget
         def remove_from_hand(button):
+            nonlocal bank_balance
             if card in hand:
+                if button is sell_button:
+                    bank_balance += card.price_usd
+                    bank_label.value = f'Bank: ${bank_balance:,}'
                 hand.remove(card)
                 hand_widget.children = tuple(hand)
 
@@ -362,4 +370,4 @@ def hand_to_widget(hand):
     draw_button = widgets.Button(description='Draw replacements', button_style='primary')
     draw_button.on_click(draw_replacements)
 
-    return widgets.VBox([hand_widget, draw_button])
+    return widgets.VBox([bank_label, hand_widget, draw_button])
