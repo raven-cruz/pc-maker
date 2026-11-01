@@ -312,3 +312,20 @@ def make_random_card(category=None):
     if not category: category = random.choice(CATEGORIES)
     index = random.randrange(0, len(CATALOG[category])) # maybe a more sophisticated way to do but this'll work
     return make_card(category, index)
+
+### -------------------- DEAL HANDS -------------------- ###
+def deal_hand(hand_size=4):
+    return [make_random_card() for _ in range(hand_size)]
+
+def hand_to_widget(hand):
+    hand = deal_hand()
+    hand_widget = widgets.Box(
+        hand,
+        layout=widgets.Layout(
+            display='flex',
+            flex_flow='row nowrap',
+            overflow='auto',
+            width='100%',
+        ),
+    )
+    return hand_widget
