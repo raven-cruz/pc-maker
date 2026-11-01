@@ -2,12 +2,14 @@
   {
     "id": "led_argb_strip",
     "name": "GlowTape ARGB 5V Strip",
+    "price_usd": 16,
     "rgb_connector": "ARGB_5V_3PIN",
     "power_w": 4
   },
   {
     "id": "led_rgb_strip",
     "name": "GlowTape RGB 12V Strip",
+    "price_usd": 14,
     "rgb_connector": "RGB_12V_4PIN",
     "power_w": 5
   }

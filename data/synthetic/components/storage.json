@@ -2,6 +2,7 @@
   {
     "id": "ssd_nvme4_2280",
     "name": "ByteDrive Sprint 1 TB",
+    "price_usd": 79,
     "form_factor": "M2",
     "key": "M",
     "size": 2280,
@@ -12,6 +13,7 @@
   {
     "id": "ssd_nvme3_2280",
     "name": "ByteDrive Sprint 512 GB",
+    "price_usd": 39,
     "form_factor": "M2",
     "key": "M",
     "size": 2280,
@@ -22,6 +24,7 @@
   {
     "id": "ssd_nvme5_2280",
     "name": "ByteDrive Sprint 5 2 TB",
+    "price_usd": 179,
     "form_factor": "M2",
     "key": "M",
     "size": 2280,
@@ -32,6 +35,7 @@
   {
     "id": "ssd_nvme4_2230",
     "name": "ByteDrive Mini 2230 1 TB",
+    "price_usd": 99,
     "form_factor": "M2",
     "key": "M",
     "size": 2230,
@@ -42,6 +46,7 @@
   {
     "id": "ssd_nvme4_22110",
     "name": "ByteDrive Long 22110 2 TB",
+    "price_usd": 139,
     "form_factor": "M2",
     "key": "M",
     "size": 22110,
@@ -52,6 +57,7 @@
   {
     "id": "ssd_m2_sata",
     "name": "ByteDrive M.2 SATA 512 GB",
+    "price_usd": 35,
     "form_factor": "M2",
     "key": "B+M",
     "size": 2280,
@@ -61,6 +67,7 @@
   {
     "id": "ssd_sata25",
     "name": "ByteDrive 2.5-inch SSD 1 TB",
+    "price_usd": 69,
     "form_factor": "SATA_2.5",
     "protocol": "SATA",
     "power_w": 4
@@ -68,6 +75,7 @@
   {
     "id": "hdd_sata35",
     "name": "ByteDrive 3.5-inch HDD 4 TB",
+    "price_usd": 89,
     "form_factor": "SATA_3.5",
     "protocol": "SATA",
     "power_w": 9

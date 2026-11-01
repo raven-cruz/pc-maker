@@ -2,6 +2,7 @@
   {
     "id": "cooler_am4_stock",
     "name": "ChillBits AM4 Stock",
+    "price_usd": 20,
     "supported_mounts": [
       "AM4"
     ],
@@ -14,6 +15,7 @@
   {
     "id": "cooler_lowprofile",
     "name": "ChillBits LP70",
+    "price_usd": 35,
     "supported_mounts": [
       "AM4",
       "AM5",
@@ -28,6 +30,7 @@
   {
     "id": "cooler_tower155",
     "name": "ChillBits Tower 155 ARGB",
+    "price_usd": 55,
     "supported_mounts": [
       "AM4",
       "AM5",
@@ -42,6 +45,7 @@
   {
     "id": "cooler_tower170",
     "name": "ChillBits Double Tower",
+    "price_usd": 85,
     "supported_mounts": [
       "AM5",
       "LGA1700"
@@ -55,6 +59,7 @@
   {
     "id": "cooler_aio240",
     "name": "ChillBits Liquid 240 RGB",
+    "price_usd": 129,
     "supported_mounts": [
       "AM4",
       "AM5",
@@ -69,6 +74,7 @@
   {
     "id": "cooler_lga_only",
     "name": "ChillBits L17 Tower",
+    "price_usd": 65,
     "supported_mounts": [
       "LGA1700"
     ],

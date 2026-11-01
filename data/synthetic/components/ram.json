@@ -2,6 +2,7 @@
   {
     "id": "ram_d4_8",
     "name": "PixelRAM DDR4 8 GB",
+    "price_usd": 19,
     "type": "DDR4",
     "form_factor": "UDIMM",
     "pins": 288,
@@ -11,6 +12,7 @@
   {
     "id": "ram_d4_16",
     "name": "PixelRAM DDR4 16 GB Kit (2x8)",
+    "price_usd": 34,
     "type": "DDR4",
     "form_factor": "UDIMM",
     "pins": 288,
@@ -20,6 +22,7 @@
   {
     "id": "ram_d4_32",
     "name": "PixelRAM DDR4 32 GB Kit (2x16)",
+    "price_usd": 55,
     "type": "DDR4",
     "form_factor": "UDIMM",
     "pins": 288,
@@ -29,6 +32,7 @@
   {
     "id": "ram_d4_64",
     "name": "PixelRAM DDR4 64 GB Kit (4x16)",
+    "price_usd": 99,
     "type": "DDR4",
     "form_factor": "UDIMM",
     "pins": 288,
@@ -38,6 +42,7 @@
   {
     "id": "ram_d5_16",
     "name": "PixelRAM DDR5 16 GB",
+    "price_usd": 39,
     "type": "DDR5",
     "form_factor": "UDIMM",
     "pins": 288,
@@ -47,6 +52,7 @@
   {
     "id": "ram_d5_32",
     "name": "PixelRAM DDR5 32 GB Kit (2x16)",
+    "price_usd": 69,
     "type": "DDR5",
     "form_factor": "UDIMM",
     "pins": 288,
@@ -56,6 +62,7 @@
   {
     "id": "ram_d5_64",
     "name": "PixelRAM DDR5 64 GB Kit (2x32)",
+    "price_usd": 129,
     "type": "DDR5",
     "form_factor": "UDIMM",
     "pins": 288,
@@ -65,6 +72,7 @@
   {
     "id": "ram_d5_128",
     "name": "PixelRAM DDR5 128 GB Kit (4x32)",
+    "price_usd": 279,
     "type": "DDR5",
     "form_factor": "UDIMM",
     "pins": 288,

@@ -2,6 +2,7 @@
   {
     "id": "psu_atx450",
     "name": "VoltWorks 450W Basic",
+    "price_usd": 45,
     "form_factor": "ATX",
     "watts": 450,
     "connectors": {
@@ -15,6 +16,7 @@
   {
     "id": "psu_atx650",
     "name": "VoltWorks 650W Bronze",
+    "price_usd": 75,
     "form_factor": "ATX",
     "watts": 650,
     "connectors": {
@@ -28,6 +30,7 @@
   {
     "id": "psu_atx850",
     "name": "VoltWorks 850W Modern",
+    "price_usd": 129,
     "form_factor": "ATX",
     "watts": 850,
     "connectors": {
@@ -41,6 +44,7 @@
   {
     "id": "psu_sfx550",
     "name": "VoltWorks SFX 550W",
+    "price_usd": 99,
     "form_factor": "SFX",
     "watts": 550,
     "connectors": {

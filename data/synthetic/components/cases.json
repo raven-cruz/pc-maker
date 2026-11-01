@@ -2,6 +2,7 @@
   {
     "id": "case_pocket",
     "name": "FrameLab Pocket mATX",
+    "price_usd": 79,
     "motherboard_form_factors": [
       "mATX",
       "ITX"
@@ -24,6 +25,7 @@
   {
     "id": "case_airflow",
     "name": "FrameLab Airflow ATX",
+    "price_usd": 109,
     "motherboard_form_factors": [
       "ATX",
       "mATX",
@@ -50,6 +52,7 @@
   {
     "id": "case_mini",
     "name": "FrameLab Mini ITX",
+    "price_usd": 99,
     "motherboard_form_factors": [
       "ITX"
     ],
@@ -68,6 +71,7 @@
   {
     "id": "case_showcase",
     "name": "FrameLab RGB Showcase",
+    "price_usd": 149,
     "motherboard_form_factors": [
       "ATX",
       "mATX",

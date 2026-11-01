@@ -2,6 +2,7 @@
   {
     "id": "gpu_tiny75",
     "name": "RenderFox Nano 75",
+    "price_usd": 99,
     "pcie_slot": "PCIE_X16",
     "pcie_generation": 3,
     "length_mm": 175,
@@ -12,6 +13,7 @@
   {
     "id": "gpu_mid170",
     "name": "RenderFox Play 170",
+    "price_usd": 279,
     "pcie_slot": "PCIE_X16",
     "pcie_generation": 4,
     "length_mm": 245,
@@ -24,6 +26,7 @@
   {
     "id": "gpu_long285",
     "name": "RenderFox Ultra 285",
+    "price_usd": 549,
     "pcie_slot": "PCIE_X16",
     "pcie_generation": 4,
     "length_mm": 322,
@@ -36,6 +39,7 @@
   {
     "id": "gpu_titan350",
     "name": "RenderFox Titan 350",
+    "price_usd": 899,
     "pcie_slot": "PCIE_X16",
     "pcie_generation": 5,
     "length_mm": 356,
