@@ -21,6 +21,13 @@ def hand_to_widget(hand):
         ),
     )
 
+    def update_build_buttons():
+        for card in hand:
+            build_button = card.children[-1].children[1]
+            can_afford = bank_balance >= card.price_usd
+            build_button.style.button_color = 'green' if can_afford else 'gray'
+            build_button.disabled = not can_afford
+
     def connect_card_buttons(card):
         sell_button, build_button = card.children[-1].children
 
@@ -30,14 +37,20 @@ def hand_to_widget(hand):
             if card in hand:
                 if button is sell_button:
                     bank_balance += card.price_usd
-                    bank_label.value = f'Bank: ${bank_balance:,}'
+                if button is build_button:
+                    if bank_balance < card.price_usd:
+                        return
+                    bank_balance -= card.price_usd
+                bank_label.value = f'Bank: ${bank_balance:,}'
                 hand.remove(card)
                 hand_widget.children = tuple(hand)
+                update_build_buttons()
 
         sell_button.on_click(remove_from_hand)
         build_button.on_click(remove_from_hand)
 
     for card in hand: connect_card_buttons(card)
+    update_build_buttons()
 
     # draw replacements for cards removed from hand
     def draw_replacements(button):
@@ -47,6 +60,7 @@ def hand_to_widget(hand):
             hand.append(card)
 
         hand_widget.children = tuple(hand)
+        update_build_buttons()
 
     draw_button = widgets.Button(description='Draw replacements', button_style='primary')
     draw_button.on_click(draw_replacements)
