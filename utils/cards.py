@@ -288,13 +288,21 @@ def make_card(type, index):
             widgets.Label(name, style={'font_weight': 'bold'}), 
             widgets.Label(f'${price:,}', style={'text_color': 'green'})
         ], 
-        layout=widgets.Layout(width='300px', justify_content='space-between')
+        layout=widgets.Layout(width='100%', justify_content='space-between', overflow='hidden')
     )
 
     specs_layout = specs_widget(specs)
 
+    add_button = widgets.Button(description='[ + ]', style={'button_color': 'green'})
+    sell_button = widgets.Button(description='[ - ]', style={'button_color': 'red'})
+    keep_button = widgets.Button(description='[ ... ]', style={'button_color': 'gray'})
+    buttons = widgets.HBox(
+        [sell_button, keep_button, add_button],
+        layout=widgets.Layout(width='100%', justify_content='space-between', overflow='hidden'),
+    )
+
     card = widgets.VBox(
-        [header, image, specs_layout],
+        [header, image, specs_layout, buttons],
         layout=widgets.Layout(
             width='350px',
             height='460px',
