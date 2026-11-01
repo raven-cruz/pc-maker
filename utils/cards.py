@@ -295,9 +295,8 @@ def make_card(type, index):
 
     add_button = widgets.Button(description='[ build ]', tooltip='Add to build', style={'button_color': 'green'})
     sell_button = widgets.Button(description='[ sell ]', tooltip='Sell this card', style={'button_color': 'red'})
-    keep_button = widgets.Button(description='[ keep ]', style={'button_color': 'gray'})
     buttons = widgets.HBox(
-        [sell_button, keep_button, add_button],
+        [sell_button, add_button],
         layout=widgets.Layout(width='100%', justify_content='space-between', overflow='hidden'),
     )
 
@@ -326,7 +325,7 @@ def deal_hand(hand_size=4):
     return [make_random_card() for _ in range(hand_size)]
 
 def hand_to_widget(hand):
-    kept_cards = [False] * len(hand)
+    original_hand_size = len(hand)
     hand_widget = widgets.Box(
         hand,
         layout=widgets.Layout(
@@ -337,25 +336,26 @@ def hand_to_widget(hand):
         ),
     )
 
-    # keep button toggles cards as kepy and adds to / removes from kept list
-    def connect_keep_button(card, card_index):
-        keep_button = card.children[-1].children[1]
+    def connect_card_buttons(card):
+        sell_button, build_button = card.children[-1].children
 
-        def toggle_keep(button):
-            kept_cards[card_index] = not kept_cards[card_index]
-            button.description = '[ kept ]' if kept_cards[card_index] else '[ keep ]'
-            button.tooltip = 'Click to keep this card' if not kept_cards[card_index] else 'Click to unkeep this card'
+        # removes card from hand AND widget
+        def remove_from_hand(button):
+            if card in hand:
+                hand.remove(card)
+                hand_widget.children = tuple(hand)
 
-        keep_button.on_click(toggle_keep)
+        sell_button.on_click(remove_from_hand)
+        build_button.on_click(remove_from_hand)
 
-    for card_index, card in enumerate(hand): connect_keep_button(card, card_index)
+    for card in hand: connect_card_buttons(card)
 
-    # only replace unkept cards
+    # draw replacements for cards removed from hand
     def draw_replacements(button):
-        for card_index, is_kept in enumerate(kept_cards):
-            if not is_kept:
-                hand[card_index] = make_random_card()
-                connect_keep_button(hand[card_index], card_index)
+        while len(hand) < original_hand_size:
+            card = make_random_card()
+            connect_card_buttons(card)
+            hand.append(card)
 
         hand_widget.children = tuple(hand)
 
