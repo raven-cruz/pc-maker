@@ -293,9 +293,9 @@ def make_card(type, index):
 
     specs_layout = specs_widget(specs)
 
-    add_button = widgets.Button(description='[ + ]', style={'button_color': 'green'})
-    sell_button = widgets.Button(description='[ - ]', style={'button_color': 'red'})
-    keep_button = widgets.Button(description='[ ... ]', style={'button_color': 'gray'})
+    add_button = widgets.Button(description='[ build ]', tooltip='Add to build', style={'button_color': 'green'})
+    sell_button = widgets.Button(description='[ sell ]', tooltip='Sell this card', style={'button_color': 'red'})
+    keep_button = widgets.Button(description='[ keep ]', style={'button_color': 'gray'})
     buttons = widgets.HBox(
         [sell_button, keep_button, add_button],
         layout=widgets.Layout(width='100%', justify_content='space-between', overflow='hidden'),
@@ -326,7 +326,7 @@ def deal_hand(hand_size=4):
     return [make_random_card() for _ in range(hand_size)]
 
 def hand_to_widget(hand):
-    hand = deal_hand()
+    kept_cards = [False] * len(hand)
     hand_widget = widgets.Box(
         hand,
         layout=widgets.Layout(
@@ -336,4 +336,30 @@ def hand_to_widget(hand):
             width='100%',
         ),
     )
-    return hand_widget
+
+    # keep button toggles cards as kepy and adds to / removes from kept list
+    def connect_keep_button(card, card_index):
+        keep_button = card.children[-1].children[1]
+
+        def toggle_keep(button):
+            kept_cards[card_index] = not kept_cards[card_index]
+            button.description = '[ kept ]' if kept_cards[card_index] else '[ keep ]'
+            button.tooltip = 'Click to keep this card' if not kept_cards[card_index] else 'Click to unkeep this card'
+
+        keep_button.on_click(toggle_keep)
+
+    for card_index, card in enumerate(hand): connect_keep_button(card, card_index)
+
+    # only replace unkept cards
+    def draw_replacements(button):
+        for card_index, is_kept in enumerate(kept_cards):
+            if not is_kept:
+                hand[card_index] = make_random_card()
+                connect_keep_button(hand[card_index], card_index)
+
+        hand_widget.children = tuple(hand)
+
+    draw_button = widgets.Button(description='Draw replacements', button_style='primary')
+    draw_button.on_click(draw_replacements)
+
+    return widgets.VBox([hand_widget, draw_button])
