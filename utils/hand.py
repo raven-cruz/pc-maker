@@ -25,10 +25,15 @@ def hand_to_widget(hand, build_widget=None):
     def update_build_buttons():
         nonlocal can_sell
         for card in hand:
-            build_button = card.children[-1].children[1]
+            build_button = card.children[-1].children[2]
             can_afford = bank_balance >= card.price_usd
             build_button.style.button_color = 'green' if can_afford else 'gray'
             build_button.disabled = not can_afford
+
+            scrap_button = card.children[-1].children[1]
+            can_afford = bank_balance >= (card.price_usd / 2)
+            scrap_button.style.button_color = 'orange' if can_afford else 'gray'
+            scrap_button.disabled = not can_afford
 
             # only let sell once per hand
             sell_button = card.children[-1].children[0]
@@ -37,7 +42,7 @@ def hand_to_widget(hand, build_widget=None):
 
 
     def connect_card_buttons(card):
-        sell_button, build_button = card.children[-1].children
+        sell_button, scrap_button, build_button = card.children[-1].children
 
         # removes card from hand AND widget
         def remove_from_hand(button):
@@ -47,6 +52,10 @@ def hand_to_widget(hand, build_widget=None):
                 if button is sell_button:
                     bank_balance += card.price_usd
                     can_sell = False # one sell per hand
+                if button is scrap_button:
+                    if bank_balance < (card.price_usd/2):
+                        return
+                    bank_balance -= (card.price_usd/2)
                 if button is build_button:
                     if bank_balance < card.price_usd:
                         return
@@ -85,6 +94,7 @@ def hand_to_widget(hand, build_widget=None):
                 update_build_buttons()
 
         sell_button.on_click(remove_from_hand)
+        scrap_button.on_click(remove_from_hand)
         build_button.on_click(remove_from_hand)
 
     for card in hand: connect_card_buttons(card)

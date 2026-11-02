@@ -30,9 +30,10 @@ def make_card(type, index, c_width=350, c_height=460):
     )
 
     add_button = widgets.Button(description='[ build ]', tooltip='Add to build', style={'button_color': 'green'})
+    scrap_button = widgets.Button(description='[ scrap ]', tooltip='Scrap this card', style={'button_color': 'orange'})
     sell_button = widgets.Button(description='[ sell ]', tooltip='Sell this card', style={'button_color': 'red'})
     buttons = widgets.HBox(
-        [sell_button, add_button],
+        [sell_button, scrap_button, add_button],
         layout=widgets.Layout(width='100%', justify_content='space-between', overflow='hidden'),
     )
 
