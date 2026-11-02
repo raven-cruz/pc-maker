@@ -51,7 +51,33 @@ def hand_to_widget(hand, build_widget=None):
                     if bank_balance < card.price_usd:
                         return
                     bank_balance -= card.price_usd
+
+                    # REMOVE CARDS FROM BUILD
                     if build_widget is not None:
+                        def remove_from_build(remove_button):
+                            if card in build_widget.children:
+                                build_widget.children = tuple(
+                                    build_card
+                                    for build_card in build_widget.children if build_card is not card
+                                )
+
+                        remove_button = widgets.Button(
+                            description='[ x ]',
+                            tooltip='Remove from build',
+                            style={'button_color': 'orange'},
+                        )
+                        remove_button.on_click(remove_from_build)
+                        card.children = (
+                            *card.children[:-1],
+                            widgets.HBox(
+                                [remove_button],
+                                layout=widgets.Layout(
+                                    width='100%',
+                                    justify_content='flex-end',
+                                    overflow='hidden',
+                                ),
+                            ),
+                        )
                         build_widget.children = (*build_widget.children, card)
                 bank_label.value = f'Bank: ${bank_balance:,}'
                 hand.remove(card)
