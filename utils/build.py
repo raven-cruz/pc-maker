@@ -21,6 +21,38 @@ def _connectors(motherboard, kind):
     ]
 
 
+def get_missing_parts(cards):
+    required_parts = [
+        'cases',
+        'motherboards',
+        'cpus',
+        'coolers',
+        'ram',
+        'storage',
+        'psus',
+    ]
+    present_parts = {card.component_type for card in cards}
+    missing_parts = [part_type for part_type in required_parts if part_type not in present_parts]
+
+    cpus = [card.part for card in cards if card.component_type == 'cpus']
+    has_integrated_graphics = any(cpu['integrated_graphics'] for cpu in cpus)
+    if 'gpus' not in present_parts and not has_integrated_graphics:
+        missing_parts.append('gpus' if cpus else 'gpus or a CPU with integrated graphics')
+
+    display_names = {
+        'cases': 'Case',
+        'motherboards': 'Motherboard',
+        'cpus': 'CPU',
+        'coolers': 'CPU cooler',
+        'ram': 'RAM',
+        'storage': 'Storage',
+        'psus': 'Power supply',
+        'gpus': 'Graphics card',
+        'gpus or a CPU with integrated graphics': 'Graphics card or CPU with integrated graphics',
+    }
+    return [display_names[part_type] for part_type in missing_parts]
+
+
 def check_build(cards):
     parts = {}
     for card in cards:
