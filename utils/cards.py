@@ -30,8 +30,12 @@ def get_card_image(part_id):
 ### -------------------- CARD MAKER -------------------- ###
 def make_card(type, index):
     part = CATALOG[type][index]
-    
-    name = part['name']
+
+    type_label = str(type).upper()
+    if type_label == "MOTHERBOARDS": type_label = "MOBO"    # ia m being lazy
+    if type_label[-1] == 'S': type_label = type_label[:-1]  # lazy way to get rid of plurals
+
+    name = f"{type_label} - {part['name']}"
     price = part['price_usd']
     specs_layout = specs_widget(type, part)
     image = get_card_image(part['id'])
@@ -65,6 +69,8 @@ def make_card(type, index):
     )
 
     card.price_usd = price
+    card.component_type = type
+    card.part = part
 
     return card
 
