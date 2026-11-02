@@ -7,7 +7,7 @@ from utils.cards import make_random_card
 def deal_hand(hand_size=4):
     return [make_random_card() for _ in range(hand_size)]
 
-def hand_to_widget(hand):
+def hand_to_widget(hand, build_widget=None):
     original_hand_size = len(hand)
     bank_balance = 0
     can_sell = True
@@ -51,6 +51,8 @@ def hand_to_widget(hand):
                     if bank_balance < card.price_usd:
                         return
                     bank_balance -= card.price_usd
+                    if build_widget is not None:
+                        build_widget.children = (*build_widget.children, card)
                 bank_label.value = f'Bank: ${bank_balance:,}'
                 hand.remove(card)
                 hand_widget.children = tuple(hand)
