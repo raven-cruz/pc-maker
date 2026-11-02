@@ -1,0 +1,78 @@
+{
+  "cases": {
+    "case_pocket": "TL",
+    "case_airflow": "BR",
+    "case_mini": "TR",
+    "case_showcase": "BL"
+  },
+  "coolers": {
+    "cooler_am4_stock": "TL",
+    "cooler_lowprofile": "BR",
+    "cooler_tower155": "TR",
+    "cooler_tower170": "TR",
+    "cooler_aio240": "BL",
+    "cooler_lga_only": "BR"
+  },
+  "cpus": {
+    "cpu_a4_65": "TL",
+    "cpu_a4_105": "TR",
+    "cpu_a5_65": "BL",
+    "cpu_a5_170": "BR",
+    "cpu_l17_65": "TL",
+    "cpu_l17_125": "BL",
+    "cpu_l17_180": "TR"
+  },
+  "fans": {
+    "fan_plain120": "TL",
+    "fan_argb120": "TR",
+    "fan_rgb120": "BR"
+  },
+  "gpus": {
+    "gpu_tiny75": "BR",
+    "gpu_mid170": "TL",
+    "gpu_long285": "TR",
+    "gpu_titan350": "BL"
+  },
+  "lighting": {
+    "led_argb_strip": "BL",
+    "led_rgb_strip": "BL"
+  },
+  "motherboards": {
+    "mb_aster_b550m": "TL",
+    "mb_aster_x570": "TR",
+    "mb_nova_b650m": "BL",
+    "mb_nova_b650i": "BR",
+    "mb_comet_b660d": "TL",
+    "mb_comet_z790d": "BR"
+  },
+  "psus": {
+    "psu_atx450": "TL",
+    "psu_atx650": "BL",
+    "psu_atx850": "TR",
+    "psu_sfx550": "BR"
+  },
+  "ram": {
+    "ram_d4_8": "TL",
+    "ram_d4_16": "BL",
+    "ram_d4_32": "TR",
+    "ram_d4_64": "BR",
+    "ram_d5_16": "TL",
+    "ram_d5_32": "BL",
+    "ram_d5_64": "TR",
+    "ram_d5_128": "BR"
+  },
+  "storage": {
+    "M2": {
+      "ssd_nvme4_2280": "TL",
+      "ssd_nvme3_2280": "TR",
+      "ssd_nvme5_2280": "BL",
+      "ssd_nvme4_2230": "BR",
+      "ssd_nvme4_22110": "TL",
+      "ssd_m2_sata": "TR"
+    },
+    "SATA": {
+      "ssd_sata25": "BL",
+      "hdd_sata35": "TR"
+    }
+  }
+}
