@@ -3,32 +3,12 @@ import random
 
 from utils.catalog import CATALOG, CATEGORIES
 from utils.specs_getter import specs_widget
+from utils.image import part_id_to_widget
 
 data_loc = "../data/synthetic/components"
 
-### -------------------- HELPERS -------------------- ###
-
-# PLACEHOLDER IMAGE
-# will eventually have cute lil pics for components
-# for now, this:
-image_placeholder = widgets.Box(
-    [widgets.Label('IMAGE PLACEHOLDER')],
-    layout=widgets.Layout(
-        width='98%',
-        height='40%',
-        justify_content='center',
-        align_items='center',
-        border='1px solid #ccc',
-    ),
-)
-
-# grab card images
-def get_card_image(part_id):
-    # in the future, will have to make a lookup by part id
-    return image_placeholder # TODO: add imaged for parts
-
 ### -------------------- CARD MAKER -------------------- ###
-def make_card(type, index):
+def make_card(type, index, c_width=350, c_height=460):
     part = CATALOG[type][index]
 
     type_label = str(type).upper()
@@ -38,7 +18,7 @@ def make_card(type, index):
     name = f"{type_label} - {part['name']}"
     price = part['price_usd']
     specs_layout = specs_widget(type, part)
-    image = get_card_image(part['id'])
+    image = part_id_to_widget(part['id'], c_width, c_height*0.4)
     
     # CARD HEADER = |name  price|
     header = widgets.HBox(
@@ -59,12 +39,12 @@ def make_card(type, index):
     card = widgets.VBox(
         [header, image, specs_layout, buttons],
         layout=widgets.Layout(
-            width='350px',
-            height='460px',
+            width=f'{c_width}px',
+            height=f'{c_height}px',
             padding='6px',
             border='1px solid #777',
-            flex='0 0 350px',
-            min_width='350px',
+            flex=f'0 0 {c_width}px',
+            min_width=f'{c_width}px',
         ),
     )
 
